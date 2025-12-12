@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio website complete</title>
+    <title>Amine Belhaj Amor - Portfolio</title>
   </head>
   <body>
     <!--===== HEADER =====-->
@@ -30,6 +30,9 @@
               <a href="#projects" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
+              <a href="#awards" class="nav__link">Awards</a>
+            </li>
+            <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
@@ -39,9 +42,10 @@
         </div>
       </nav>
     </header>
+
     <main class="l-main">
       <!--===== HOME =====-->
-      <section class="home bd-grid">
+      <section class="home bd-grid" id="home">
         <div class="home__data">
           <h1 class="home__title">Hi, <br>I am <span class="home__title-color">Amine</span>
             <br>
@@ -69,6 +73,7 @@
           </svg>
         </div>
       </section>
+
       <!--===== ABOUT =====-->
       <section class="about section " id="about">
         <h2 class="section-title">About</h2>
@@ -82,18 +87,16 @@
           </div>
         </div>
       </section>
-      <!--===== SKILLS =====-->
+
       <!--===== EXPERIENCE =====-->
       <section class="experience section" id="experience">
         <h2 class="section-title">Experience</h2>
         <div class="experience__container bd-grid">
-          <!-- Internship Experience -->
+          <!-- ENSEM Nancy Internship -->
           <div class="experience__item">
-            <!-- Company Logo -->
             <div class="experience__logo">
-              <img src="assets/img/ENSEM.png" alt="ENSEm Logo" class="experience__logo-img">
+              <img src="assets/img/ENSEM.png" alt="ENSEM Logo" class="experience__logo-img">
             </div>
-            <!-- Experience Description -->
             <div class="experience__description">
               <h3 class="experience__title">Robotics R&D Internship</h3>
               <span class="experience__company">ENSEM Nancy</span>
@@ -103,7 +106,6 @@
 I designed and implemented a LiDAR obstacle detection node, handling acquisition, preprocessing (PassThrough filtering and RANSAC segmentation), and Euclidean Cluster Extraction to identify distinct obstacles. The system published structured data to ROS 2 topics for future integration into autonomous decision modules.<br>
 
 This project strengthened my expertise in ROS 2 networking, containerized development, and real-time LiDAR processing within embedded robotic systems. </p>
-              <!-- Work Images (Now inside the same box) -->
               <div class="experience__images">
                 <img src="assets/img/ensem1.jpg" alt="ensem Image 1" class="experience__img" onclick="openLightbox(this)">
                 <img src="assets/img/ensem2.png" alt="ensem Image 2" class="experience__img" onclick="openLightbox(this)">
@@ -111,12 +113,11 @@ This project strengthened my expertise in ROS 2 networking, containerized develo
               </div>
             </div>
           </div>
+          <!-- Orange Digital Center Internship -->
           <div class="experience__item">
-            <!-- Company Logo -->
             <div class="experience__logo">
               <img src="assets/img/orange.png" alt="orange Logo" class="experience__logo-img">
             </div>
-            <!-- Experience Description -->
             <div class="experience__description">
               <h3 class="experience__title">Embedded System and IoT Internship</h3>
               <span class="experience__company">Orange Digital Center Tunis</span>
@@ -128,7 +129,6 @@ I participated in the entire development cycle of the device, from hardware desi
 On the software side, I implemented a real-time embedded architecture based on FreeRTOS, enabling deterministic task scheduling for data acquisition, filtering, and wireless communication. I developed a signal processing module applying band-pass filtering and interpolation to clean ECG and PPG signals and estimate core body temperature from skin readings. Processed data was then transmitted to a server for further analysis by an AI anomaly detection model.<br>
 
 This internship strengthened my skills in embedded systems design, real-time software development, signal processing, and IoT communication, while applying them to a concrete biomedical engineering project.</p>
-              <!-- Work Images (Now inside the same box) -->
               <div class="experience__images">
                 <img src="assets/img/orange1.jpg" alt="Project Image 1" class="experience__img" onclick="openLightbox(this)">
                 <img src="assets/img/orange2.jpg" alt="Project Image 1" class="experience__img" onclick="openLightbox(this)">
@@ -136,22 +136,21 @@ This internship strengthened my skills in embedded systems design, real-time sof
                 <img src="assets/img/orange4.jpg" alt="Project Image 1" class="experience__img" onclick="openLightbox(this)">
               </div>
             </div>
-          </div>  
+          </div>
         </div>
       </section>
+
       <!--===== PROJECTS =====-->
       <section class="projects section" id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="projects__container bd-grid">
-          <!-- Project 1 -->
+          <!-- Eurobot 2024 Project -->
           <div class="projects__item">
             <div class="project__logo">
-                <a href="https://github.com/MedAmine-01/Eurobot2024" target="_blank">
-                  <img src="assets/img/github.png" alt="GitHub Logo" class="experience__logo-img">
-                </a>
-              </div>
-              
-              <!-- Project Title and Description -->
+              <a href="https://github.com/MedAmine-01/Eurobot2024" target="_blank">
+                <img src="assets/img/github.png" alt="GitHub Logo" class="experience__logo-img">
+              </a>
+            </div>
             <div class="projects__description">
               <h3 class="projects__title">Participated in Eurobot 2024 Competition</h3>
               <span class="projects__date">October 2023 - May 2024</span>
@@ -163,69 +162,74 @@ This internship strengthened my skills in embedded systems design, real-time sof
                 <li>Collaborated on <strong>system integration</strong>, <strong>autonomous strategy</strong>, and <strong>testing</strong> under competition constraints.</li>
               </ul>
             </div>
-            <!-- Project Images (Clickable for Lightbox) -->
             <div class="project__images">
               <img src="assets/img/eurobot1.jpeg" alt="eurobot Image 1" class="project__img" onclick="openLightbox(this)">
               <img src="assets/img/eurobot2.jpeg" alt="eurobot Image 2" class="project__img" onclick="openLightbox(this)">
             </div>
-            <hr>
-             <div class="project__videos">
-                    <video controls class="project__video">
-                        <source src="assets/eurobot.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+            <div class="project__videos">
+              <video controls class="project__video">
+                <source src="assets/eurobot.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+          <!-- Remote Control System Project -->
+          <div class="projects__item">
+            <div class="project__logo">
+              <a href="https://github.com/MedAmine-01/Remote-Control-System" target="_blank">
+                <img src="assets/img/github.png" alt="GitHub Logo" class="experience__logo-img">
+              </a>
+            </div>
+            <div class="projects__description">
+              <h3 class="projects__title">Remote Control System for an Autonomous Differential-Wheeled Robot</h3>
+              <span class="projects__date">May 2024 - June 2024</span>
+              <p class="projects__text">This project focuses on developing a remote control system using an intuitive graphical user interface (GUI) to interact with a differential wheeled robot. The system employs an ESP32 microcontroller with integrated Wi-Fi for communication, enabling real-time control and monitoring from any location. A nested-loop controller is implemented to regulate both the position and velocity of the robot.
+                 The communication between the interface and the system is established via the MQTT protocol, allowing for efficient data exchange over local and wide-area networks. The project demonstrates the adaptability of the interface, making it applicable to various industrial control systems, such as temperature or level regulation. Through experimental validation, the system has been optimized by adjusting control parameters, ensuring smooth and stable performance.</p>
+            </div>
+            <div class="project__videos">
+              <video controls class="project__video">
+                <source src="assets/BBB.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
-        
-             <!-- Project 2-->
-             <div class="projects__item">
-                <div class="project__logo">
-                    <a href="https://github.com/MedAmine-01/Remote-Control-System" target="_blank">
-                      <img src="assets/img/github.png" alt="GitHub Logo" class="experience__logo-img">
-                    </a>
-                  </div>
-                  
-                <!-- Project Title and Description -->
-                <div class="projects__description">
-                  <h3 class="projects__title">Remote Control System for an Autonomous Differential-Wheeled Robot</h3>
-                  <span class="projects__date">May 2024 - June 2024</span>
-                  <p class="projects__text">This project focuses on developing a remote control system using an intuitive graphical user interface (GUI) to interact with a differential wheeled robot. The system employs an ESP32 microcontroller with integrated Wi-Fi for communication, enabling real-time control and monitoring from any location. A nested-loop controller is implemented to regulate both the position and velocity of the robot.
-                     The communication between the interface and the system is established via the MQTT protocol, allowing for efficient data exchange over local and wide-area networks. The project demonstrates the adaptability of the interface, making it applicable to various industrial control systems, such as temperature or level regulation. Through experimental validation, the system has been optimized by adjusting control parameters, ensuring smooth and stable performance.As you can see in the video below </p>
-                </div>
-                <!-- Project Images (Clickable for Lightbox) -->
-                <div class="project__videos">
-                    <video controls class="project__video">
-                        <source src="assets/BBB.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-              </div>
-            </div>
       </section>
-      <!-- Lightbox Container (Hidden by default) -->
-      <div id="lightbox" class="lightbox">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-      </div>
-    <!--===== CONTACT =====-->
-    <section class="contact section" id="contact">
+
+      <!--===== AWARDS =====-->
+      <section class="awards section" id="awards">
+        <h2 class="section-title">Awards</h2>
+        <div class="awards__container">
+          <div class="award__item">
+            <img src="assets/img/award1.jpg" alt="ECPC1.0 Award" class="award__img">
+            <div class="award__info">
+              <h3 class="award__title">2nd Place - Embedded Competitive Programming Contest ECPC1.0</h3>
+              <p class="award__organizer">Organized by IEEE &amp; Centre Supérieur de Formation (CSF)</p>
+            </div>
+          </div>
+          <div class="award__item">
+            <img src="assets/img/award2.jpg" alt="ECPP1.0 Award" class="award__img">
+            <div class="award__info">
+              <h3 class="award__title">2nd Place - Embedded Competitive Programming Preparation ECPP1.0</h3>
+              <p class="award__organizer">Organized by IEEE &amp; Centre Supérieur de Formation (CSF)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== CONTACT =====-->
+      <section class="contact section" id="contact">
         <h2 class="section-title">Contact Me</h2>
         <div class="contact__container bd-grid">
-          <!-- Contact Card -->
           <div class="contact__card">
-            <!-- Your Photo -->
             <div class="contact__photo">
               <img src="assets/img/perfil.png" alt="Your Name" class="contact__photo-img">
             </div>
-      
-            <!-- Your Name and Job Title -->
             <div class="contact__details">
               <h3 class="contact__name">Amine Belhaj Amor</h3>
               <span class="contact__title">Embedded Software Enginnering student</span>
             </div>
-      
-            <!-- Contact Information -->
             <div class="contact__info">
               <p class="contact__email">
                 <a href="mailto:mohamedamine.belhajamor@insat.ucar.tn">mohamedamine.belhajamor@insat.ucar.tn</a>
@@ -234,20 +238,22 @@ This internship strengthened my skills in embedded systems design, real-time sof
                 <a href="tel:+21694385507">+216 94 385 507</a>
               </p>
             </div>
-      
-            <!-- Optional: Social Media Links -->
             <div class="contact__social">
-                <a href="https://www.linkedin.com/in/amine-belhaj-amor-4a6177266/" target="_blank" class="contact__social-icon">
-                  <i class='bx bxl-linkedin'></i>
-                </a>
-                <a href="https://github.com/MedAmine-01" target="_blank" class="contact__social-icon">
-                  <i class='bx bxl-github'></i>
-                </a>
-              </div>
+              <a href="https://www.linkedin.com/in/amine-belhaj-amor-4a6177266/" target="_blank" class="contact__social-icon">
+                <i class='bx bxl-linkedin'></i>
+              </a>
+              <a href="https://github.com/MedAmine-01" target="_blank" class="contact__social-icon">
+                <i class='bx bxl-github'></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
+    </main>
+
     <!--===== FOOTER =====-->
     <footer class="footer">
-      <p class="footer__title">Thank you for reading !</p>
+      <p class="footer__title">Thank you for reading!</p>
       <div class="footer__social">
         <a href="#" class="footer__icon">
           <i class='bx bxl-github'></i>
@@ -256,12 +262,15 @@ This internship strengthened my skills in embedded systems design, real-time sof
           <i class='bx bxl-linkedin'></i>
         </a>
       </div>
-      <p class="footer__copy">Phone : +216 94 385 507</p>
-      <p class="footer__copy">Email : mohamedamine.belhajamor@insat.ucar.tn</p>
+      <p class="footer__copy">Phone : +216 94 385 507 | Email : mohamedamine.belhajamor@insat.ucar.tn <br>&copy; 2025 Amine Belhaj Amor</p>
     </footer>
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <!--===== MAIN JS =====-->
+
+    <!--===== LIGHTBOX =====-->
+    <div class="lightbox" id="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" src="">
+    </div>
+
     <script src="assets/js/main.js"></script>
   </body>
 </html>
